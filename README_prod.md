@@ -29,3 +29,8 @@ Link do repozytorium Dockerhub ze zbudowanymi obrazami: <a href="https://hub.doc
   <li><b>docker compose -f docker-compose.yml up</b></li>
 </ul>
   
+<img src="./tch-z2-screenshots/prod0.png"/>
+<img src="./tch-z2-screenshots/prod1.png"/>
+<img src="./tch-z2-screenshots/prod2.png"/>
+<img src="./tch-z2-screenshots/prod3.png"/>
+<img src="./tch-z2-screenshots/prod5.png"/>
