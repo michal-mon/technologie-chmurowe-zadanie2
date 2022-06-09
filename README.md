@@ -25,3 +25,10 @@
 <h4>Opis Dockerfile:</h4>
 <h5>Element "client":</h5>
 <p></p>
+<h5>Element "api":</h5>
+<p></p>
+<h5>Element "worker":</h5>
+<p>Zarówno <b>Dockerfile</b> jak i <b>Dockerfile.dev</b> są analogiczne jak dla elementu "api".</p>
+<h5>Element "nginx":</h5>
+<p><b>Dockerfile</b> oraz <b>Dockerfile.dev</b> bazują na obrazie alpine, na którym zostaje zainstalowany serwer nginx z domyślną konfiguracją, a plik konfiguracyjny zostaje przeniesiony do katalogu "/etc/nginx/http.d/".</p>
+
