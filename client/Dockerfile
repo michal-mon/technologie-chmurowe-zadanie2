@@ -6,7 +6,14 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-FROM nginx
+FROM alpine
+RUN apk update \
+    && apk add nginx \
+    && adduser -D -g 'www' www \
+    && mkdir /www \
+    && chown -R www:www /var/lib/nginx \
+    && chown -R www:www /www 
+COPY ./nginx/default.conf /etc/nginx/nginx.conf
+COPY --from=builder /app/build /www
 EXPOSE 3000
-COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/build /usr/share/nginx/html
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]

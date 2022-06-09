@@ -2,12 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { MemoryRouter } from "react-router-dom";
 import Documentation from './Documentation';
 import GSCal from './GSCal';
 
 function App() {
   return (
-    <Router>
+    <MemoryRouter>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -21,7 +22,7 @@ function App() {
           <Route path="/documentation" component={Documentation} />
         </div>
       </div>
-    </Router>
+    </MemoryRouter>
   );
 }
 
