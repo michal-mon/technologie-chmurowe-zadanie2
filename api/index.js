@@ -33,18 +33,6 @@ const redisClient = redis.createClient({
 });
 const redisPublisher = redisClient.duplicate();
 
-app.get("/values/all", async (req, res) => {
-  const values = await pgClient.query("select * from kValues order by ts desc");
-  res.send(values.rows);
-});
-
-app.get("/values/recent", async (req, res) => {
-  const values = await pgClient.query(
-    "select * from kValues order by ts desc limit 5"
-  );
-  res.send(values.rows);
-});
-
 function convertToArrayOfObjects(array) {
   if (array == null) return []
   return Object.entries(array).map((value) => {
@@ -60,6 +48,18 @@ function convertToArrayOfObjects(array) {
 function sortBasedOnTimestamp(a, b) {
   return parseInt(a["ts"]) < parseInt(b["ts"]) ? 1 : -1
 }
+
+app.get("/values/all", async (req, res) => {
+  const values = await pgClient.query("select * from kValues order by ts desc");
+  res.send(values.rows);
+});
+
+app.get("/values/recent", async (req, res) => {
+  const values = await pgClient.query(
+    "select * from kValues order by ts desc limit 5"
+  );
+  res.send(values.rows);
+});
 
 app.get("/calcValues/all", async (req, res) => {
   redisClient.hgetall("kValues", (err, values) => {
