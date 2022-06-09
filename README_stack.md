@@ -6,7 +6,7 @@ zatem ponownie zostanie wykorzystany plik <b>secrets.sh</b>.</p>
 <h4>Konfiguracja poszczególnych elementów usługi:</h4>
 <ol>
   <li>
-    <h5>postgres:</h5>
+    <h4>postgres:</h4>
     <ul>
       <li>Liczba replik: 1</li>
       <li>Polityka restartu: restart w razie awarii</li>
@@ -15,7 +15,7 @@ zatem ponownie zostanie wykorzystany plik <b>secrets.sh</b>.</p>
     </ul>
   </li>
   <li>
-    <h5>redis:</h5>
+    <h4>redis:</h4>
     <ul>
       <li>Liczba replik: 1</li>
       <li>Polityka restartu: restart w razie awarii</li>
@@ -24,7 +24,7 @@ zatem ponownie zostanie wykorzystany plik <b>secrets.sh</b>.</p>
     </ul>
   </li>
   <li>
-    <h5>nginx:</h5>
+    <h4>nginx:</h4>
     <ul>
       <li>Liczba replik: 2</li>
       <li>Polityka restartu: restart w razie awarii</li>
@@ -33,7 +33,7 @@ zatem ponownie zostanie wykorzystany plik <b>secrets.sh</b>.</p>
     </ul>
   </li>
   <li>
-    <h5>client:</h5>
+    <h4>client:</h4>
     <ul>
       <li>Liczba replik: 2</li>
       <li>Polityka restartu: restart w razie awarii</li>
@@ -42,7 +42,7 @@ zatem ponownie zostanie wykorzystany plik <b>secrets.sh</b>.</p>
     </ul>
   </li>
   <li>
-    <h5>api:</h5>
+    <h4>api:</h4>
     <ul>
       <li>Liczba replik: 2</li>
       <li>Polityka restartu: restart w razie awarii</li>
@@ -51,7 +51,7 @@ zatem ponownie zostanie wykorzystany plik <b>secrets.sh</b>.</p>
     </ul>
   </li>
   <li>
-    <h5>worker:</h5>
+    <h4>worker:</h4>
     <ul>
       <li>Liczba replik: 1</li>
       <li>Polityka restartu: restart w razie awarii</li>
@@ -60,3 +60,15 @@ zatem ponownie zostanie wykorzystany plik <b>secrets.sh</b>.</p>
     </ul>
   </li>
 </ol>
+
+<h4>Użyte polecenia i uruchomienie usługi w klastrze Swarm:</h4>
+
+<ul>
+  <li><b>docker swarm init</b> - inicjalizacja klastra</li>
+  <li><b>. secrets.sh</b> - zapisanie wartości zmiennych środowiskowych w powłoce</li>
+  <li><b>docker stack deploy -c docker.swarm.yml tch-z2</b> - wdrożenie usługi w klastrze Swarm</li>
+</ul>
+
+<img src="./tch-z2-screenshots/swarm1.png"/>
+<img src="./tch-z2-screenshots/swarm2.png"/>
+<img src="./tch-z2-screenshots/swarm3.png"/>
