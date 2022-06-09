@@ -19,3 +19,9 @@
 </ul>
 <p>Po dodaniu nowego wpisu do Redisa zostaje wysłana wiadomość, aby "poinformować" workera o pojawieniu się nowego współczynnika "k", dla którego zostaną wykonane obliczenia.</p>
 <h5>Element "worker":</h5>
+<p>Worker po otrzymaniu informacji z elementu "api" o pojawieniu się nowego współczynnika jest wykonuje obliczenia i aktualizuje wartości w bazie danych.</p>
+<h5>Element "nginx":</h5>
+<p>Serwer "nginx" został skonfigurowany jako reverese-proxy.</p>
+<h4>Opis Dockerfile:</h4>
+<h5>Element "client":</h5>
+<p></p>
