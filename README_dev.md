@@ -15,6 +15,11 @@
 
 <b>docker compose -f docker-compose.dev.yml up</b> (wykonane w katalogu z odpowiednim plikiem)
 
-
+<img src="./tch-z2-screenshots/dev0.png"/>
+<img src="./tch-z2-screenshots/dev1.png"/>
+<img src="./tch-z2-screenshots/dev2.png"/>
+<img src="./tch-z2-screenshots/dev3.png"/>
+<img src="./tch-z2-screenshots/dev5.png"/>
+  
   
  
