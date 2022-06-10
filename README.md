@@ -24,7 +24,7 @@
 <p>Serwer "nginx" został skonfigurowany jako reverese-proxy.</p>
 <h3>Opis Dockerfile:</h3>
 <h4>Element "client":</h4>
-<p><b>Dockerfile.dev</b> pozostał bez zmian, natomiast w przypadku <b>Dockerfile</b> builder jako obraz bazowy wykorzystuje obraz <b>node:alpine</b> do zbudowania aplikacji, natomiast w drugim etapie wykorzystywany jest "czysty" obraz <b>alpine</b>, na którym zostaje zainstalowany i skonfigurowany serwer nginx, a aplikacja z etapu pierwszego zostaje skopiowana (analogicznie do pierwotnego pliku <b>Dockerfile</b>). </p>
+<p><b>Dockerfile.dev</b> pozostał bez zmian, natomiast w przypadku <b>Dockerfile</b> zostało wykorzystane budowanie wieloeatpowe. Builder jako obraz bazowy wykorzystuje obraz <b>node:alpine</b> do zbudowania aplikacji, natomiast w drugim etapie wykorzystywany jest "czysty" obraz <b>alpine</b>, na którym zostaje zainstalowany i skonfigurowany serwer nginx, a aplikacja z etapu pierwszego zostaje skopiowana (analogicznie do pierwotnego pliku <b>Dockerfile</b>). </p>
 <h4>Element "api":</h4>
 <p><b>Dockerfile</b> i <b>Dockerfile.dev</b> dla elementu "api" nie uległy zmianom.</p>
 <h4>Element "worker":</h4>
