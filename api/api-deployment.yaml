@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
-namespace: default
 metadata:
   name: api-deployment
+  namespace: default
 spec:
   selector:
     matchLabels:
