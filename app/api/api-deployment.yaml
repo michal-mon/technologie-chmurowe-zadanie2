@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: api
-        image: michalmon/pfswcho-api:latest
+        image: michalmon/pfswcho-api:main
         ports:
         - containerPort: 80
