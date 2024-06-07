@@ -64,7 +64,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-              michalmon/$IMAGE_NAME:$IMAGE_TAG
+              michalmon/pfswcho:latest
 
       #Aktualizacja cache
       - name: Cache update
