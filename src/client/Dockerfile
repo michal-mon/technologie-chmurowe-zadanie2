@@ -3,7 +3,7 @@ ENV NODE_OPTIONS=--openssl-legacy-provider
 WORKDIR '/app'
 RUN npm init -y
 COPY **/package.json **/
-RUN npm install
+RUN NODE_ENV=development npm i
 COPY **/ **/
 RUN npm run build
 
