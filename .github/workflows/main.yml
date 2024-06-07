@@ -26,13 +26,13 @@ jobs:
       matrix:
         include:
           - dockerfile: ./src/api/Dockerfile
-            image: michalmon/pfswcho:api
+            image: michalmon/pfswcho-api
           - dockerfile: ./src/client/Dockerfile
-            image: michalmon/pfswcho:client
+            image: michalmon/pfswcho-client
           - dockerfile: ./src/nginx/Dockerfile
-            image: michalmon/pfswcho:nginx
+            image: michalmon/pfswcho-nginx
           - dockerfile: ./src/worker/Dockerfile
-            image: michalmon/pfswcho:worker
+            image: michalmon/pfswcho-worker
     permissions:
       contents: read
       packages: write
@@ -71,5 +71,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           file: ${{ matrix.dockerfile }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
           push: true
 
