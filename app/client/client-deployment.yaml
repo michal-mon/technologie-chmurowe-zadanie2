@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: client
-        image: michalmon/tch-z2:client
+        image: michalmon/pfswcho-client:main
         ports:
         - containerPort: 80
