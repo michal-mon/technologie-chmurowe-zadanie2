@@ -15,6 +15,6 @@ RUN apk update \
     && chown -R www:www /var/lib/nginx \
     && chown -R www:www /www 
 COPY **/nginx/default.conf /etc/nginx/nginx.conf
-COPY --from=builder /app/build /www
+#COPY --from=builder /app/build /www
 EXPOSE 3000
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
