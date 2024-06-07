@@ -1,10 +1,10 @@
 FROM node:alpine as builder
 ENV NODE_OPTIONS=--openssl-legacy-provider
-WORKDIR '**/app'
-COPY **/package.json **/
-COPY **/package-lock.json **/
+WORKDIR '/app'
+COPY **/package.json **/app
+COPY **/package-lock.json **/app
 RUN npm install
-COPY **/ **/
+COPY **/app **/app
 RUN npm run build
 
 FROM alpine
