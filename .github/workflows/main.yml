@@ -63,7 +63,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ matrix.image }}
+          images: ${{ matrix.image.tags }}
           
       #Zbudowanie i wypchniecie obrazu do Dockerhub
       - name: Build & push Dockerhub
