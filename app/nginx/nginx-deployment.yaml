@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: michalmon/tch-z2:nginx
+        image: michalmon/pfswcho-nginx:main
         ports:
         - containerPort: 80
