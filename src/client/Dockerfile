@@ -1,4 +1,4 @@
-FROM node:lts-alpine as builder
+FROM node:alpine as builder
 ENV NODE_OPTIONS=--openssl-legacy-provider
 WORKDIR '/app'
 COPY **/package.json **/
