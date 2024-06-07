@@ -4,7 +4,7 @@ WORKDIR '/app'
 RUN npm init -y
 COPY **/package.json **/
 RUN npm install
-COPY . .
+COPY **/ **/
 RUN npm run build
 
 FROM alpine
