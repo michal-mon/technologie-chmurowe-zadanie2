@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: worker
-        image: michalmon/tch-z2:worker
+        image: michalmon/pfswcho-worker:main
         ports:
         - containerPort: 80
